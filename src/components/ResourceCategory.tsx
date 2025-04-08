@@ -9,6 +9,7 @@ interface Resource {
   title: string;
   description: string;
   languages?: string[];
+  downloadUrl?: string; // Added downloadUrl property
 }
 
 interface ResourceCategoryProps {
@@ -47,6 +48,7 @@ const ResourceCategory: React.FC<ResourceCategoryProps> = ({
                 title={resource.title}
                 description={resource.description}
                 languages={resource.languages}
+                downloadUrl={resource.downloadUrl}
               />
             ))}
           </div>

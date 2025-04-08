@@ -10,6 +10,7 @@ interface Subject {
   title: string;
   description: string;
   languages: string[];
+  downloadUrl?: string; // Added downloadUrl property
 }
 
 interface SemesterData {
@@ -74,6 +75,7 @@ const SemesterSection: React.FC<SemesterSectionProps> = ({ semestersData, search
                         title={subject.title}
                         description={subject.description}
                         languages={subject.languages}
+                        downloadUrl={subject.downloadUrl}
                       />
                     ))}
                   </div>
